@@ -1,0 +1,211 @@
+
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;}
+
+
+
+body{
+    background-image: url('assets/images/background.jpeg');
+    background-size: cover;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+label{
+    font-weight: bold;
+    width: 250px;
+}
+
+
+
+.container{
+    margin: 50px;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+input, textarea, select{
+    width: 200px;
+
+    border: 1px solid #f0f0f0;
+    height: 25px;
+    border-radius: 5px;
+}
+textarea{
+    height: 100px;
+}
+
+.profile-container{
+    padding-top: 50px;
+    box-shadow: 0px 0px 10px 1px rgb(126, 126, 126);
+    width: 50%;    
+    background-color: rgb(235, 235, 235);
+}
+
+
+img{
+    margin: 0 auto;
+}
+
+
+
+/* Form */
+
+
+form{
+
+}
+
+form .row{
+    margin: 15px;
+}
+
+
+
+form img{
+    margin-bottom: 40px;
+}
+
+form #edit-button{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: 1s all ;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+form .button{
+    margin: 10px;
+    cursor: pointer;
+    transition: .5s all;
+    text-align: center;
+    font-size: 15px;
+
+}
+form a{
+    line-height: 35px;
+    width: 100px;
+
+}
+
+
+
+
+/* Recetas */
+
+#recetas-container{
+    margin: 50px 150px;
+
+
+}
+.recetas-table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.recetas-table tbody tr{
+    background-color: rgb(255, 255, 255);
+}
+.recetas-table tbody tr:nth-child(odd){
+    background-color: rgb(233, 233, 233);
+}
+
+
+
+.recetas-table td{
+    text-align: center;
+}
+
+.recetas-table tr{
+    cursor: pointer;
+    transition: 0.25s all;
+}
+
+.recetas-table thead tr:nth-child(1){
+    height: 75px;
+    color: white;
+    background-color: rgb(119, 119, 119);
+}
+
+.recetas-table tbody tr:hover{
+    background-color: rgb(207, 207, 207);
+}
+
+
+.button{
+    border: none;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    min-width: 70px;
+}
+
+.delete-button{
+    background-color:rgb(230, 88, 88);
+
+    color: white;
+}
+
+.view-button{
+    background-color:rgb(87, 157, 238);
+
+    color: white;
+    
+}
+
+.view-button:hover{
+    background-color:rgb(17, 103, 201);
+
+}
+
+.create-button{
+    background-color:rgb(51, 167, 51);
+    font-size: 25px;
+    padding: 5px 25px 5px 25px;
+}
+
+td img{
+    width: 200px;
+    height: 150px;
+}
+
+
+.check{
+    font-size: 35px;
+    color: rgb(7, 196, 7);
+}
+
+.close{
+    font-size: 35px;
+    color: rgb(196, 7, 7);
+}
+
+.publish-button{
+    background-color:rgb(51, 167, 51);
+    font-size: 15px;
+    width: 100px;
+    
+}
