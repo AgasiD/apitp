@@ -7,7 +7,7 @@
 
 
 body{
-    background-image: url('assets/images/background.jpeg');
+    background-image: url('./imagenes/background1.webp');
     background-size: cover;
 }
 
@@ -62,7 +62,7 @@ textarea{
     padding-top: 50px;
     box-shadow: 0px 0px 10px 1px rgb(126, 126, 126);
     width: 50%;    
-    background-color: rgb(235, 235, 235);
+    background-color: rgba(235, 235, 235, .7);
 }
 
 
@@ -210,11 +210,46 @@ td img{
     
 }
 
+.app-principal{
+    text-align: center;
+    background-color: rgba(194, 119, 119, 0.5);
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 10px;
+}
 
+.app-principal h1{
+    text-align: center;
+    color : pink;
+    font-weight: bold;
+
+}
+
+.app-principal p{
+    font-size: 23px;
+    color: white;
+}
+
+#landing-body{
+
+}
 
 /*  Media Queries */
 
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: .8s;
+}
 
+@keyframes fadeIn{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
 
 
 @media only screen and (max-width: 1135px) {
