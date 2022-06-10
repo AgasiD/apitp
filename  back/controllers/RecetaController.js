@@ -3,14 +3,6 @@ const Receta  = require('../models/Receta');
 
 const createReceta = async(req, res = response ) => {
 
-   // const body = {
-   //    nombre,
-   //    pasos,
-   //    dificultad,
-   //    categoria,
-   //    ingredientes,
-   //    imageUrl
-   // }
    const body = req.body;
 
    let receta = new Receta( body );
@@ -30,7 +22,8 @@ const obtenerTodas = async (req,res=response) => {
 }
 
 const obtenerByUsuario = async (req,res=response) => {
-      let recetas = Receta.find();
+   const { recetaId } = req.params;
+      let recetas = Receta.findById(recetaId);
       res.json({
          recetas
       });
@@ -50,10 +43,8 @@ const updateReceta = async(req, res = response) => {
    const { recetaId } = req.params;
    const body = req.body;
    try{
-
       let response = await Receta.findByIdAndUpdate(recetaId, body);
       // no es necesario el receta.save()
-      // let respose = 'Receta actualizada';
       res.status(200).json({
          response
       })
@@ -63,7 +54,6 @@ const updateReceta = async(req, res = response) => {
          response
       })
    }
-      
 }
 
 const deleteReceta = async(req, res = response) => {
@@ -82,7 +72,7 @@ const deleteReceta = async(req, res = response) => {
          'Receta eliminada');
    }catch ( err ){
       let response = err.message
-      res.json({
+      res.status(404).json({
          response
       })
    }
