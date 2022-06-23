@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const { obtenerTodas, obtenerByUsuario, obtenerByFiltro, updateReceta, deleteReceta } = require('../controllers/RecetaController');
 ''
 
 // const { validarCampos } = require('../middlewares/validar-campos');

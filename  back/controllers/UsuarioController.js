@@ -9,7 +9,7 @@ const crearUsuario = async(req, res = response ) => {
 
     const query = { estado: true };
     
-    let existeUsuario = Usuario.findOne( user => user.email == email);
+    let existeUsuario = await Usuario.findOne( user => user.email == email);
     if(existeUsuario){
        throw Error('El email ingresado ya se encuentra registrado');
     }
@@ -30,7 +30,7 @@ const autenticarUsuario = async(req, res = response ) => {
 
    const { email, password } = req.body;
 
-   let usuario = Usuario.findOne(user => user.email == email);
+   let usuario = await Usuario.findOne(user => user.email == email);
    if(!usuario){
       throw Error('Usuario y/o contrasena incorrectos');
       
@@ -47,7 +47,7 @@ const changePassword = async(req, res = response ) => {
 
    const { email, password } = req.body;
 
-   let usuario = Usuario.findOne(user => user.email == email);
+   let usuario = await Usuario.findOne(user => user.email == email);
    if(!usuario){
       throw Error('Usuario y/o  incorrectos');
    }else if( password == usuario.password){
@@ -63,7 +63,7 @@ const updateProfile = async(req, res = response ) => {
 
       const { id, ...body} = req.body;
       
-      let usuario = Usuario.findByIdAndUpdate(id, usuario)
+      let usuario = await Usuario.findByIdAndUpdate(id, usuario)
       
       res.status(200).end('Usuario actualizado con existo');
    }catch( err ){

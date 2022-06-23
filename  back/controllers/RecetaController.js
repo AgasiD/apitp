@@ -16,13 +16,14 @@ const createReceta = async(req, res = response ) => {
 
 const obtenerTodas = async (req,res=response) => {
    let recetas = await Receta.find({});
-   console.log(recetas);
-   res.end();
+   res.json({
+      recetas
+   });
 }
 
 const obtenerByUsuario = async (req,res=response) => {
    const { recetaId } = req.params;
-      let recetas = Receta.findById(recetaId);
+      let recetas = await Receta.findById(recetaId);
       res.json({
          recetas
       });
@@ -30,7 +31,7 @@ const obtenerByUsuario = async (req,res=response) => {
 
 const obtenerByFiltro = async (req,res=response) => {
    let {cal} = req.body;
-      let recetas = Receta.find();
+      let recetas = await Receta.find();
       res.json({
          recetas
       });
