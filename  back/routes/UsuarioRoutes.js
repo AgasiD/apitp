@@ -1,6 +1,5 @@
 const { Router } = require('express');
-const { createReceta, updateReceta, deleteReceta } = require('../controllers/RecetaController');
-
+''
 
 // const { validarCampos } = require('../middlewares/validar-campos');
 
@@ -14,7 +13,7 @@ router.get('/',[
     // check('correo', 'El correo es obligatorio').isEmail(),
     // check('password', 'La contraseña es obligatoria').not().isEmpty(),
     // validarCampos
-], obtenerTodas );
+], obtenerTodas);
 
 router.get('/:usuarioId',[
     // check('correo', 'El correo es obligatorio').isEmail(),

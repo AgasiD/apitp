@@ -15,10 +15,9 @@ const createReceta = async(req, res = response ) => {
 }
 
 const obtenerTodas = async (req,res=response) => {
-   let recetas = Receta.find();
-   res.json({
-      recetas
-   });
+   let recetas = await Receta.find({});
+   console.log(recetas);
+   res.end();
 }
 
 const obtenerByUsuario = async (req,res=response) => {
